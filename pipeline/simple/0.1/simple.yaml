@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+ name: demo-pipeline
+spec:
+ tasks:
+ - name: task1
+   taskSpec:
+     steps:
+       - image: alpine
+         name: echo
+         script: |
+         echo "Hello World"
